@@ -59,6 +59,11 @@
                                                         required>
                                                 </div>
                                                 <div class="form-group">
+                                                    <label for="password">Password</label>
+                                                    <input type="text" class="form-control" id="password" name="password"
+                                                        required>
+                                                </div>
+                                                <div class="form-group">
                                                     <label for="poli">Poli</label>
                                                     <select class="form-control" id="poli" name="poli">
                                                         <?php

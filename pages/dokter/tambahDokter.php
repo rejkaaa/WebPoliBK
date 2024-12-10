@@ -7,10 +7,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $alamat = $_POST["alamat"];
     $no_hp = $_POST["no_hp"];
     $poli = $_POST["poli"];
-    $password = md5($nama);
+    $password = $_POST["password"];
+
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
 
     // Query untuk menambahkan data obat ke dalam tabel
-    $query = "INSERT INTO dokter (nama, password, alamat, no_hp, id_poli) VALUES ('$nama', '$password', '$alamat', '$no_hp', '$poli')";
+    $query = "INSERT INTO dokter (nama, password, alamat, no_hp, id_poli) VALUES ('$nama', '$hashed_password', '$alamat', '$no_hp', '$poli')";
     
 
     // if ($koneksi->query($query) === TRUE) {
