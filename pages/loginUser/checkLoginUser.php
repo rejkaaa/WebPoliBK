@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         header("location:../../dashboard_pasien.php");
     } else {
-        echo '<script>alert("Email atau password salah");location.href="../../loginUser.php";</script>';
+        echo '<script>alert("Username atau password salah");location.href="../../loginUser.php";</script>';
     }
 }
 ?>

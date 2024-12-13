@@ -14,9 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysqli_num_rows($result) > 0) {
         $data = mysqli_fetch_assoc($result);
 
-        // Debug: tampilkan hash password dari database
-        echo "Hash dari database: " . $data['password'] . "<br>";
-
         // Verifikasi password menggunakan password_verify
         if (password_verify($password, $data['password'])) {
             $_SESSION['id'] = $data['id'];
@@ -27,10 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header("location:../../dashboard_dokter.php");
             exit();
         } else {
-            echo "Password salah<br>";
+            echo '<script>alert("Password salah!");location.href="../../login.php";</script>';
         }
     } else {
-        echo "Username tidak ditemukan<br>";
+        echo '<script>alert("Username tidak ditemukan!");location.href="../../login.php";</script>';
+        
     }
 }
 ?>
