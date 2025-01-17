@@ -186,6 +186,10 @@
                                             data-target="#hapusModal<?php echo $data['id'] ?>"
                                             <?php echo $data['id_dokter'] == $id_dokter ? '' : 'disabled'?>>Hapus</button> -->
                                         <?php } ?>
+                                        <button type='button' class='btn btn-sm btn-danger'
+                                            data-toggle="modal" data-target="#hapusModal<?php echo $data['id'] ?>">
+                                            Hapus 
+                                        </button>
                                     </td>
                                     <!-- Modal Edit Data Obat -->
                                     <div class="modal fade" id="editModal<?php echo $data['id'] ?>" tabindex="-1"
@@ -248,26 +252,23 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Modal Hapus Data Obat -->
-                                    <div class="modal fade" id="hapusModal<?php echo $data['id'] ?>" tabindex="-1"
-                                        role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+                                    <!-- Modal Hapus Jadwal -->
+                                    <div class="modal fade" id="hapusModal<?php echo $data['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="hapusModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="addModalLabel">Hapus Data Obat</h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
+                                                    <h5 class="modal-title" id="hapusModalLabel">Hapus Jadwal</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <!-- Form edit data obat disini -->
-                                                    <form action="pages/obat/hapusObat.php" method="post">
-                                                        <input type="hidden" class="form-control" id="id" name="id"
-                                                            value="<?php echo $data['id'] ?>" required>
-                                                        <p>Apakah anda yakin akan menghapus data <span
-                                                                class="font-weight-bold"><?php echo $data['nama_obat'] ?></span>
-                                                        </p>
+                                                    <p>Apakah Anda yakin ingin menghapus jadwal untuk dokter <strong><?php echo $data['nama'] ?></strong> pada hari <strong><?php echo $data['hari'] ?></strong>?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <form action="pages/jadwalPeriksa/hapusJadwal.php" method="post">
+                                                        <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                                         <button type="submit" class="btn btn-danger">Hapus</button>
                                                     </form>
                                                 </div>

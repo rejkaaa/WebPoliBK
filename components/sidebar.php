@@ -119,6 +119,13 @@
                                     <p>Daftar Poli <span class="right badge badge-info">Pasien</span></p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+    <a href="profilePasien.php" class="nav-link">
+        <i class="nav-icon fas fa-user"></i>
+        <p>Update Profile <span class="right badge badge-success">Pasien</span></p>
+    </a>
+</li>
+
                         </ul>
                     <?php } ?>
                 </li>

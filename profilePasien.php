@@ -14,7 +14,7 @@ if ($username == "") {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profile</title>
+    <title>Poliklinik</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -37,7 +37,7 @@ if ($username == "") {
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <?php include('pages/dokter/updateProfile.php') ?>
+            <?php include('pages/pasien/updateProfile.php') ?>
             <!-- /.content -->
         </div>
     </div>

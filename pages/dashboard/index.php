@@ -44,12 +44,12 @@
 <body>
 
     <!-- Section : Main content -->
-    <section class="Header">
+    <!-- <section class="Header">
         <div class="overlay">
             <h2 class="title" style="text-bold font-family">Selamat Datang Di poli Klinik Kesehatan</h2>
             <p>Rawat dan Jaga Baik Baik Kesehatan Tubuh Kamu</p>
         </div>
-    </section>
+    </section> -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.2/dist/umd/popper.min.js"></script>
